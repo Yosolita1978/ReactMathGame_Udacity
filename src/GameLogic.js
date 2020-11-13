@@ -30,9 +30,8 @@ class GameLogic extends Component{
     const correctAnswer = this.checkAnswerMath();
     this.updateState(userClick);
     let result = userClick === correctAnswer ? "true" : "false";
-    //some how I need to send this to the App component. 
-    console.log(result);
-    return result
+    //console.log(result);
+    this.props.handleScore(result);
   }
   
   updateState(userClick){
